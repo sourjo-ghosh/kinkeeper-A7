@@ -1,21 +1,50 @@
+'use client'
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import { BsChatLeftText } from "react-icons/bs";
 import { FaRegTrashAlt, FaVideo } from "react-icons/fa";
 import { IoArchiveOutline } from "react-icons/io5";
 import { MdAddCall } from "react-icons/md";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 
-const FriendsDetails = async ({ params }) => {
-  const { id } = await params;
-  const data = await fetch(
-    "https://kinkeeper-sepia.vercel.app/friendsData.json",
-  );
-  const FriendDetailsData = await data.json();
-  console.log(FriendDetailsData);
-  const ExpectedFriend = FriendDetailsData.find((item) => item.id == id);
-  console.log(ExpectedFriend);
+const FriendsDetails = () => {
+  const { id } = useParams();
+  const [ExpectedFriend, setExpectedFriend] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchFriend = () => {
+      fetch('https://kinkeeper-sepia.vercel.app/friendsData.json')
+        .then(res => res.json())
+        .then(data => {
+          const found = data.find(d => d.id == id);
+          setExpectedFriend(found);
+          setLoading(false);
+        });
+    };
+    fetchFriend();
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#E9E9E9]">
+        <div className="text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  if (!ExpectedFriend) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#E9E9E9]">
+        <div className="text-xl">Friend not found</div>
+      </div>
+    );
+  }
+
   return (
-    <div className="p-8 md:p-20 lg:p-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 bg-[#E9E9E9]">
+    <div className="min-h-screen p-8 md:p-20 lg:p-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 bg-[#E9E9E9]">
       <div className="p-5 space-y-3 rounded-2xl flex flex-col justify-center items-center bg-white">
         <div className="flex flex-col justify-center items-center">
           <Image
@@ -68,7 +97,7 @@ const FriendsDetails = async ({ params }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-3 gap-2">
         <div className="p-5 bg-white flex flex-col justify-center items-center rounded-2xl">
           <p className="text-[#244D3F] font-semibold text-[20px]">
             {ExpectedFriend.days_since_contact}
@@ -95,7 +124,7 @@ const FriendsDetails = async ({ params }) => {
             <button className="btn">edit</button>
           </div>
           <p className="px-3 text-[#64748B] text-[18px]">
-            Connect every{" "}
+            Connect every {" "}
             <span className="text-black font-bold">
               {ExpectedFriend.goal} Days
             </span>
@@ -134,3 +163,5 @@ const FriendsDetails = async ({ params }) => {
 };
 
 export default FriendsDetails;
+
+
