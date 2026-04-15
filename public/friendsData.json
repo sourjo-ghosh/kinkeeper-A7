@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Arif Hossain",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Arif&backgroundColor=b6e3f4",
+    "email": "arif.hossain@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["university", "close friend", "tech"],
+    "bio": "Met at BUET during freshman year. We used to solve DSA problems together at 2am. Now he's a software engineer at a Dhaka startup.",
+    "goal": 14,
+    "next_due_date": "2026-04-01"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Nusrat&backgroundColor=ffd5dc",
+    "email": "nusrat.jahan@outlook.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["childhood", "close friend", "neighbour"],
+    "bio": "Grew up in the same lane in Mirpur. She's been my best friend since class 3. Now studying pharmacy at DU.",
+    "goal": 7,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 3,
+    "name": "Tanvir Ahmed",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Tanvir&backgroundColor=c0aede",
+    "email": "tanvir.ahmed95@yahoo.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["college", "gaming", "cricket"],
+    "bio": "College batchmate from Notre Dame. We bonded over cricket and FIFA tournaments. Currently doing his MBA in Chittagong.",
+    "goal": 10,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 4,
+    "name": "Sabrina Akter",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sabrina&backgroundColor=d1f4d1",
+    "email": "sabrina.akter@gmail.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["university", "study group", "design"],
+    "bio": "Met in a UI/UX workshop during second year. She introduced me to Figma and design thinking. Works as a freelance designer now.",
+    "goal": 21,
+    "next_due_date": "2026-03-25"
+  },
+  {
+    "id": 5,
+    "name": "Rakibul Islam",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rakibul&backgroundColor=ffdfbf",
+    "email": "rakibul.islam@proton.me",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["bootcamp", "coding", "close friend"],
+    "bio": "Fellow bootcamp student. We grind through React and JavaScript problems together almost every week. Huge motivation for each other.",
+    "goal": 7,
+    "next_due_date": "2026-04-19"
+  },
+  {
+    "id": 6,
+    "name": "Mehjabin Chowdhury",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Mehjabin&backgroundColor=ffebd6",
+    "email": "mehjabin.ch@gmail.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["school", "childhood", "books"],
+    "bio": "We were bench partners in class 6 at Viqarunnisa. Lost touch after she moved to Sylhet. Reconnected on Facebook last year.",
+    "goal": 30,
+    "next_due_date": "2026-03-01"
+  },
+  {
+    "id": 7,
+    "name": "Fahim Shahriar",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Fahim&backgroundColor=b6e3f4",
+    "email": "fahim.shahriar@gmail.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["university", "entrepreneur", "startup"],
+    "bio": "We co-founded a small campus food delivery app that flopped spectacularly. Still laugh about it. He's now building his second startup.",
+    "goal": 10,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 8,
+    "name": "Priya Das",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya&backgroundColor=ffe4e1",
+    "email": "priya.das09@gmail.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["college", "music", "art"],
+    "bio": "Met at an inter-college cultural fest. She plays sitar beautifully. We stay in touch through shared Spotify playlists and voice notes.",
+    "goal": 7,
+    "next_due_date": "2026-04-21"
+  },
+  {
+    "id": 9,
+    "name": "Imran Kabir",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Imran&backgroundColor=d4f1f4",
+    "email": "imran.kabir.bd@gmail.com",
+    "days_since_contact": 22,
+    "status": "overdue",
+    "tags": ["work", "mentor", "backend"],
+    "bio": "Senior dev I met at a tech meetup in Banani. He mentored me on Node.js and system design. I owe him a lot of chai and conversations.",
+    "goal": 14,
+    "next_due_date": "2026-04-08"
+  },
+  {
+    "id": 10,
+    "name": "Lamia Sultana",
+    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Lamia&backgroundColor=e8d5f5",
+    "email": "lamia.sultana@icloud.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["university", "travel", "photography"],
+    "bio": "Hostel neighbour during first year. We went on a spontaneous trip to Cox's Bazar with zero planning. Best memories from uni.",
+    "goal": 14,
+    "next_due_date": "2026-04-16"
+  }
+]
