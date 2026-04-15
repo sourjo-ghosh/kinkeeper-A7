@@ -1,9 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
+import { Timeline } from "@/app/context/ContextProvider";
 
 const Friend = ({ friend }) => {
-  console.log(friend);
+  const name = useContext(Timeline);
+  console.log(name);
+
+
   return (
     <Link href={`/friends/${friend.id}`}>
       <div className="flex flex-col p-3 space-y-2 bg-white rounded-2xl shadow justify-center items-center">
