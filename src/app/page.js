@@ -14,25 +14,25 @@ export default function Home() {
         </p>
         <button className="flex justify-center items-center text-white bg-[#244D3F] btn text-[20px]">
           <IoIosAdd />
-          Add Button
+          Add a Friend
         </button>
       </div>
-      <div className="flex gap-3">
-        <div className="flex flex-col justify-center items-center bg bg-white p-5 rounded-2xl">
-          <span>10</span>
-          <p>Total Friends</p>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-7">
+        <div className="flex flex-col justify-center items-center bg-white p-5 rounded-2xl shadow">
+          <span className="text-[#244D3F] text-2xl font-semibold">10</span>
+          <p className="text-[18px] text-[#64748B]">Total Friends</p>
         </div>
-         <div className="flex flex-col justify-center items-center bg bg-white p-5 rounded-2xl">
-          <span>10</span>
-          <p>Total Friends</p>
+         <div className="flex flex-col justify-center items-center bg-white p-5 rounded-2xl shadow">
+          <span className="text-[#244D3F] text-2xl font-semibold">10</span>
+          <p className="text-[18px] text-[#64748B]">Total Friends</p>
         </div>
-         <div className="flex flex-col justify-center items-center bg bg-white p-5 rounded-2xl">
-          <span>10</span>
-          <p>Total Friends</p>
+         <div className="flex flex-col justify-center items-center bg-white p-5 rounded-2xl shadow">
+          <span className="text-[#244D3F] text-2xl font-semibold">10</span>
+          <p className="text-[18px] text-[#64748B]">Total Friends</p>
         </div>
-         <div className="flex flex-col justify-center items-center bg bg-white p-5 rounded-2xl">
-          <span>10</span>
-          <p>Total Friends</p>
+         <div className="flex flex-col justify-center items-center bg-white p-5 rounded-2xl shadow">
+          <span className="text-[#244D3F] text-2xl font-semibold">10</span>
+          <p className="text-[18px] text-[#64748B]">Total Friends</p>
         </div>
       </div>
     </div>
