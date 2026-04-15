@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Friend from "@/components/Friend";
-import Image from "next/image";
 import { IoIosAdd } from "react-icons/io";
 
 export default function Home() {

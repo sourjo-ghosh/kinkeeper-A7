@@ -11,7 +11,7 @@ import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { Timeline } from "@/app/context/ContextProvider";
 
 const FriendsDetails = () => {
-  const {setFriendName, setAction, setCurrentDate, setCall, setText, setVideo} = useContext(Timeline);
+  const {updateActivity} = useContext(Timeline);
   const { id } = useParams();
   const [ExpectedFriend, setExpectedFriend] = useState({});
   const [loading, setLoading] = useState(true);
@@ -45,11 +45,6 @@ const FriendsDetails = () => {
     );
   }
 
-  const handleQuickCheckInBtns = ({ ExpectedFriend, action }) => {
-    setFriendName(ExpectedFriend);
-    setAction(action);
-    setCurrentDate(new Date().toDateString());
-  };
   return (
     <div className="min-h-screen p-8 md:p-20 lg:p-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 bg-[#E9E9E9]">
       <div className="p-5 space-y-3 rounded-2xl flex flex-col justify-center items-center bg-white">
@@ -146,7 +141,7 @@ const FriendsDetails = () => {
           <div className="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-3">
             <button
               onClick={() =>
-                handleQuickCheckInBtns({ ExpectedFriend, action: "Call" })
+                updateActivity(ExpectedFriend.name, "Call")
               }
               className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]"
             >
@@ -157,7 +152,7 @@ const FriendsDetails = () => {
             </button>
             <button
               onClick={() =>
-                handleQuickCheckInBtns({ ExpectedFriend, action: "Text", setCall() })
+                updateActivity(ExpectedFriend.name, "Text")
               }
               className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]"
             >
@@ -168,7 +163,7 @@ const FriendsDetails = () => {
             </button>
             <button
               onClick={() =>
-                handleQuickCheckInBtns({ ExpectedFriend, action: "Video" })
+                updateActivity(ExpectedFriend.name, "Video")
               }
               className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]"
             >
