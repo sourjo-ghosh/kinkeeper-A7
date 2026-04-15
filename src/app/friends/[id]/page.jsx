@@ -31,9 +31,10 @@ const FriendsDetails = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#E9E9E9]">
-        <div className="text-xl">Loading...</div>
-      </div>
+      <div className="mt-16 flex flex-col items-center justify-center gap-4 rounded-3xl bg-white p-10 shadow-lg">
+          <div className="h-16 w-16 animate-spin rounded-full border-4 border-[#244D3F] border-t-transparent"></div>
+          <p className="text-[#244D3F] text-xl font-medium">Loading...</p>
+        </div>
     );
   }
 
@@ -47,14 +48,15 @@ const FriendsDetails = () => {
 
   return (
     <div className="min-h-screen p-8 md:p-20 lg:p-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 bg-[#E9E9E9]">
-      <div className="p-5 space-y-3 rounded-2xl flex flex-col justify-center items-center bg-white">
-        <div className="flex flex-col justify-center items-center">
+      <div className="p-5 space-y-3 rounded-2xl flex flex-col justify-center items-center bg-white overflow-hidden rounded-lg
+">
+        <div className="flex flex-col justify-center items-center ">
           <Image
-            className="rounded-full"
+            className="transition-transform duration-500 ease-in-out hover:scale-110 rounded-full"
             src={ExpectedFriend.picture}
             alt={ExpectedFriend.name}
-            width={100}
-            height={100}
+            width={120}
+            height={120}
           ></Image>
           <h1 className="font-bold text-2xl">{ExpectedFriend.name}</h1>
           <p
@@ -143,7 +145,7 @@ const FriendsDetails = () => {
               onClick={() =>
                 updateActivity(ExpectedFriend.name, "Call")
               }
-              className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]"
+              className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm hover:bg-[#ECFDF5] transition-all duration-200 hover:scale-105 active:scale-95 hover:shadow-lg"
             >
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#DCFCE7] text-[#166534]">
                 <MdAddCall className="h-6 w-6" />
@@ -154,7 +156,7 @@ const FriendsDetails = () => {
               onClick={() =>
                 updateActivity(ExpectedFriend.name, "Text")
               }
-              className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]"
+              className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition-all duration-200 hover:scale-105 active:scale-95 hover:shadow-lg hover:bg-[#ECFDF5]"
             >
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#DCFCE7] text-[#166534]">
                 <BsChatLeftText className="h-6 w-6" />
@@ -165,7 +167,7 @@ const FriendsDetails = () => {
               onClick={() =>
                 updateActivity(ExpectedFriend.name, "Video")
               }
-              className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]"
+              className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition-all duration-200 hover:scale-105 active:scale-95 hover:shadow-lg hover:bg-[#ECFDF5]"
             >
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#DCFCE7] text-[#166534]">
                 <FaVideo className="h-6 w-6" />
