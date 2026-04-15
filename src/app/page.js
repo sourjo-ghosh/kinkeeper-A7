@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchFriends = () => {
-      fetch("https://kinkeeper-sepia.vercel.app/friendsData.json")
+      fetch("https://keenkeeper-seven.vercel.app/friendsData.json")
         .then((res) => res.json())
         .then((data) => setFriends(data))
         setLoading(false)
