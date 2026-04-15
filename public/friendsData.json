@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Arif Hossain",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Arif&backgroundColor=b6e3f4",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
     "email": "arif.hossain@gmail.com",
     "days_since_contact": 18,
     "status": "overdue",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Nusrat Jahan",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Nusrat&backgroundColor=ffd5dc",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
     "email": "nusrat.jahan@outlook.com",
     "days_since_contact": 5,
     "status": "on-track",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Tanvir Ahmed",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Tanvir&backgroundColor=c0aede",
+    "picture": "https://randomuser.me/api/portraits/men/55.jpg",
     "email": "tanvir.ahmed95@yahoo.com",
     "days_since_contact": 11,
     "status": "almost due",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "Sabrina Akter",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sabrina&backgroundColor=d1f4d1",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
     "email": "sabrina.akter@gmail.com",
     "days_since_contact": 30,
     "status": "overdue",
@@ -50,11 +50,11 @@
   {
     "id": 5,
     "name": "Rakibul Islam",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rakibul&backgroundColor=ffdfbf",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
     "email": "rakibul.islam@proton.me",
     "days_since_contact": 3,
     "status": "on-track",
-    "tags": ["bootcamp", "coding", "close friend"],
+    "tags": ["bootcamp", "coding"],
     "bio": "Fellow bootcamp student. We grind through React and JavaScript problems together almost every week. Huge motivation for each other.",
     "goal": 7,
     "next_due_date": "2026-04-19"
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Mehjabin Chowdhury",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Mehjabin&backgroundColor=ffebd6",
+    "picture": "https://randomuser.me/api/portraits/women/23.jpg",
     "email": "mehjabin.ch@gmail.com",
     "days_since_contact": 45,
     "status": "overdue",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "name": "Fahim Shahriar",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Fahim&backgroundColor=b6e3f4",
+    "picture": "https://randomuser.me/api/portraits/men/11.jpg",
     "email": "fahim.shahriar@gmail.com",
     "days_since_contact": 9,
     "status": "almost due",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "name": "Priya Das",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya&backgroundColor=ffe4e1",
+    "picture": "https://randomuser.me/api/portraits/women/57.jpg",
     "email": "priya.das09@gmail.com",
     "days_since_contact": 6,
     "status": "on-track",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "name": "Imran Kabir",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Imran&backgroundColor=d4f1f4",
+    "picture": "https://randomuser.me/api/portraits/men/43.jpg",
     "email": "imran.kabir.bd@gmail.com",
     "days_since_contact": 22,
     "status": "overdue",
@@ -110,7 +110,7 @@
   {
     "id": 10,
     "name": "Lamia Sultana",
-    "picture": "https://api.dicebear.com/7.x/avataaars/svg?seed=Lamia&backgroundColor=e8d5f5",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
     "email": "lamia.sultana@icloud.com",
     "days_since_contact": 13,
     "status": "almost due",
