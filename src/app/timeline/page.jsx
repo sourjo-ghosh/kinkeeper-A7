@@ -1,6 +1,6 @@
 const TimeLinePage = () => {
  const metadata = {
-  title: 'My Blog',
+  title: '',
   description: '...',
 }
   return <div>hello world</div>;
