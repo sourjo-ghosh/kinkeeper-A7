@@ -3,7 +3,7 @@ import Image from "next/image";
 import { IoIosAdd } from "react-icons/io";
 
 export default async function Home () {
-  const data = await fetch('http://localhost:3000/friendsData.json') 
+  const data = await fetch('https://kinkeeper-sepia.vercel.app/friendsData.json') 
   const friends = await data.json() 
   console.log(friends)
   const onTrack = friends.filter(frr => frr.status === 'on-track')
