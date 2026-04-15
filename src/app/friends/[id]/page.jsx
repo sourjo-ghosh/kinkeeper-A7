@@ -1,25 +1,27 @@
-'use client'
+"use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { BsChatLeftText } from "react-icons/bs";
 import { FaRegTrashAlt, FaVideo } from "react-icons/fa";
 import { IoArchiveOutline } from "react-icons/io5";
 import { MdAddCall } from "react-icons/md";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
+import { Timeline } from "@/app/context/ContextProvider";
 
 const FriendsDetails = () => {
+  const {setFriendName, setAction, setCurrentDate, setCall, setText, setVideo} = useContext(Timeline);
   const { id } = useParams();
   const [ExpectedFriend, setExpectedFriend] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchFriend = () => {
-      fetch('https://kinkeeper-sepia.vercel.app/friendsData.json')
-        .then(res => res.json())
-        .then(data => {
-          const found = data.find(d => d.id == id);
+      fetch("https://kinkeeper-sepia.vercel.app/friendsData.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const found = data.find((d) => d.id == id);
           setExpectedFriend(found);
           setLoading(false);
         });
@@ -43,6 +45,11 @@ const FriendsDetails = () => {
     );
   }
 
+  const handleQuickCheckInBtns = ({ ExpectedFriend, action }) => {
+    setFriendName(ExpectedFriend);
+    setAction(action);
+    setCurrentDate(new Date().toDateString());
+  };
   return (
     <div className="min-h-screen p-8 md:p-20 lg:p-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 bg-[#E9E9E9]">
       <div className="p-5 space-y-3 rounded-2xl flex flex-col justify-center items-center bg-white">
@@ -124,7 +131,7 @@ const FriendsDetails = () => {
             <button className="btn">edit</button>
           </div>
           <p className="px-3 text-[#64748B] text-[18px]">
-            Connect every {" "}
+            Connect every{" "}
             <span className="text-black font-bold">
               {ExpectedFriend.goal} Days
             </span>
@@ -137,19 +144,34 @@ const FriendsDetails = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-3">
-            <button className="flex flex-col items-center justify-center gap-3 rounded-[2rem] border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]">
+            <button
+              onClick={() =>
+                handleQuickCheckInBtns({ ExpectedFriend, action: "Call" })
+              }
+              className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]"
+            >
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#DCFCE7] text-[#166534]">
                 <MdAddCall className="h-6 w-6" />
               </div>
               <span className="text-base font-semibold">Call</span>
             </button>
-            <button className="flex flex-col items-center justify-center gap-3 rounded-[2rem] border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]">
+            <button
+              onClick={() =>
+                handleQuickCheckInBtns({ ExpectedFriend, action: "Text", setCall() })
+              }
+              className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]"
+            >
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#DCFCE7] text-[#166534]">
                 <BsChatLeftText className="h-6 w-6" />
               </div>
               <span className="text-base font-semibold">Text</span>
             </button>
-            <button className="flex flex-col items-center justify-center gap-3 rounded-[2rem] border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]">
+            <button
+              onClick={() =>
+                handleQuickCheckInBtns({ ExpectedFriend, action: "Video" })
+              }
+              className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition hover:bg-[#ECFDF5]"
+            >
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#DCFCE7] text-[#166534]">
                 <FaVideo className="h-6 w-6" />
               </div>
@@ -163,5 +185,3 @@ const FriendsDetails = () => {
 };
 
 export default FriendsDetails;
-
-

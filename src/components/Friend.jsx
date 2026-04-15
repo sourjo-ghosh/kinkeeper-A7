@@ -4,8 +4,8 @@ import React, { useContext } from "react";
 import { Timeline } from "@/app/context/ContextProvider";
 
 const Friend = ({ friend }) => {
-  const name = useContext(Timeline);
-  console.log(name);
+  const [friendName, setFriendName, action, setAction, currentDate, setCurrentDate] = useContext(Timeline);
+  console.log(new Date().toDateString()); 
 
 
   return (
