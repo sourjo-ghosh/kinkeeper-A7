@@ -27,7 +27,6 @@ const TimeLinePage = () => {
                 className="bg-white p-5 rounded-xl shadow hover:shadow-md transition"
               >
                 <div className="flex justify-between items-center mb-2">
-                  
                   <span
                     className={`px-3 py-1 text-3xl rounded-full font-medium ${
                       item.action === "Call"
@@ -37,19 +36,21 @@ const TimeLinePage = () => {
                           : "bg-purple-100 text-purple-600"
                     }`}
                   >
-                    {item.action === "Call" ? <IoCallSharp /> : item.action === "Text" ? <BsChatRightTextFill /> : <FaVideo />} 
+                    {item.action === "Call" ? (
+                      <IoCallSharp />
+                    ) : item.action === "Text" ? (
+                      <BsChatRightTextFill />
+                    ) : (
+                      <FaVideo />
+                    )}
                   </span>
 
-                  
-                  <span className="text-sm text-gray-400">
-                    {item.time}
-                  </span>
+                  <span className="text-sm text-gray-400">{item.time}</span>
                 </div>
 
-                
                 <p className="text-gray-700">
-                  <span className="font-medium">{item.action}</span> With {" "}
-                  <span className="font-semibold">{item.user}</span> 
+                  <span className="font-medium">{item.action}</span> With{" "}
+                  <span className="font-semibold">{item.user}</span>
                 </p>
               </div>
             ))}
