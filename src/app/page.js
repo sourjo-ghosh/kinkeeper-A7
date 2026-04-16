@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       ) : (
         <>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-7">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-7 border-b border-gray-300 pb-10">
             <div className="flex flex-col justify-center items-center bg-white p-5 rounded-2xl shadow">
               <span className="text-[#244D3F] text-2xl font-semibold">{friends.length}</span>
               <p className="text-[18px] text-[#64748B]">Total Friends</p>
@@ -64,7 +64,7 @@ export default function Home() {
             </div>
           </div>
           <h1 className="my-8 font-bold text-2xl">Your Friends</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-2 items-stretch">
             {friends.map((friend) => (
               <Friend key={friend.id} friend={friend} />
             ))}

@@ -60,7 +60,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <p className="text-3xl font-bold ">
+          <p className="text-2xl font-bold ">
             Keen<span className="text-[#244D3F]">Keeper</span>
           </p>
         </div>

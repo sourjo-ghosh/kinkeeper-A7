@@ -50,7 +50,7 @@ const FriendsDetails = () => {
   return (
     <div className="min-h-screen p-8 md:p-20 lg:p-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 bg-[#E9E9E9]">
       <div
-        className="p-5 space-y-3 flex flex-col justify-center items-center bg-white overflow-hidden rounded-lg
+        className="p-2 space-y-3 flex flex-col justify-center items-center bg-white overflow-hidden rounded-lg
 "
       >
         <div className="flex flex-col justify-center items-center ">
@@ -105,23 +105,23 @@ const FriendsDetails = () => {
       </div>
 
       <div className="grid grid-cols-3 gap-2">
-        <div className="p-5 bg-white flex flex-col justify-center items-center rounded-2xl">
+        <div className="p-2 bg-white flex flex-col justify-center items-center rounded-2xl">
           <p className="text-[#244D3F] font-semibold text-[20px]">
             {ExpectedFriend.days_since_contact}
           </p>
-          <p className="text-[#64748B] text-[18px]">Days Since Contact</p>
+          <p className="text-[#64748B] text-[16px]">Days Since Contact</p>
         </div>
-        <div className="p-5 bg-white flex flex-col justify-center items-center rounded-2xl">
+        <div className="p-2 bg-white flex flex-col justify-center items-center rounded-2xl">
           <p className="text-[#244D3F] font-semibold text-[20px]">
             {ExpectedFriend.goal}
           </p>
-          <p className="text-[#64748B] text-[18px]">Goal (Days)</p>
+          <p className="text-[#64748B] text-[16px]">Goal (Days)</p>
         </div>
-        <div className="p-5 bg-white flex flex-col justify-center items-center rounded-2xl">
+        <div className="p-2 bg-white flex flex-col justify-center items-center rounded-2xl">
           <p className="text-[#244D3F] font-semibold text-[20px]">
             {ExpectedFriend.next_due_date}
           </p>
-          <p className="text-[#64748B] text-[18px]">Next Due</p>
+          <p className="text-[#64748B] text-[16px]">Next Due</p>
         </div>
         <div className="col-span-3 bg-white rounded-2xl">
           <div className="px-3 mt-2 flex justify-between items-center">

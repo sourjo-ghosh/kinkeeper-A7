@@ -7,14 +7,12 @@ import { Cell, Pie, PieChart } from "recharts";
 const StatClient = () => {
   const { activities } = useContext(Timeline);
 
-  const safeActivities = Array.isArray(activities) ? activities : [];
-  const callCount = safeActivities.filter((item) => item.action === "Call").length;
-  const textCount = safeActivities.filter((item) => item.action === "Text").length;
-  const videoCount = safeActivities.filter((item) => item.action === "Video").length;
+  const callCount = activities.filter((item) => item.action === "Call").length;
+  const textCount = activities.filter((item) => item.action === "Text").length;
+  const videoCount = activities.filter((item) => item.action === "Video").length;
 
-  // Legend labels in the Figma screenshot use "Chat" rather than "Text".
   const data = [
-    { name: "Chat", value: textCount, fill: "#7E35E1" },
+    { name: "Text", value: textCount, fill: "#7E35E1" },
     { name: "Call", value: callCount, fill: "#244D3F" },
     { name: "Video", value: videoCount, fill: "#37A163" },
   ];
@@ -47,9 +45,6 @@ const StatClient = () => {
                     isAnimationActive
                     cornerRadius={14}
                   >
-                    {data.map((entry) => (
-                      <Cell key={entry.name} fill={entry.fill} />
-                    ))}
                   </Pie>
                 </PieChart>
               </div>
@@ -58,11 +53,11 @@ const StatClient = () => {
                 {data.map((item) => (
                   <div key={item.name} className="flex items-center gap-2">
                     <span
-                      className="h-2.5 w-2.5 rounded-full"
+                      className="h-3 w-3"
                       style={{ backgroundColor: item.fill }}
                       
                     />
-                    <p className="text-[11px] font-medium text-[#64748B]">
+                    <p className="text-[16px] font-medium" style={{color: item.fill}}>
                       {item.name}
                     </p>
                   </div>

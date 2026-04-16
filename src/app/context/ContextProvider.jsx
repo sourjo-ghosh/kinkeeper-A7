@@ -9,7 +9,8 @@ const ContextProvider = ({ children }) => {
     const newActivity = {
       user,
       action,
-      time: new Date().toDateString(),
+      Date: new Date().toDateString(),
+      time: new Date()
     };
 
     setActivities((prev) => [newActivity, ...prev]);
