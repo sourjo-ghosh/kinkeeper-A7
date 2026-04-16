@@ -1,5 +1,9 @@
 # KeenKeeper
 
+
+<img width="1440" height="776" alt="Screenshot From 2026-04-16 19-31-58" src="https://github.com/user-attachments/assets/bc80920a-892c-4474-b724-de049c4993c6" />
+
+
 ## Description
 KeenKeeper is a small web app to help you keep meaningful friendships on track. Browse your friends, log interactions, and view simple analytics on how often you reach out.
 
