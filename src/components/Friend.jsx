@@ -5,7 +5,7 @@ const Friend = ({ friend }) => {
   
   return (
     <Link href={`/friends/${friend.id}`}>
-      <div className="h-100 w-auto flex flex-col p-3 space-y-2 bg-white rounded-2xl shadow justify-center items-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+      <div className="h-100 flex flex-col p-4 space-y-2 bg-white rounded-2xl shadow justify-center items-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
         <Image
           src={friend.picture}
           alt={friend.name}
