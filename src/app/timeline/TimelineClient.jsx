@@ -8,7 +8,7 @@ import { FaVideo } from "react-icons/fa";
 
 const TimelineClient = () => {
   const { activities, time } = useContext(Timeline);
-  const [filteringType, setFilteringType] = useState("");
+  const [filteringType, setFilteringType] = useState("All");
   const [sortingType, setSortingType] = useState("");
   const [inputValue, setInputValue] = useState("");
   const handleChange = (e) => {
@@ -108,6 +108,7 @@ const TimelineClient = () => {
                   <a
                     onClick={() => {
                       setSortingType("Oldest To Newest");
+                      setFilteringType("")
                     }}
                   >
                     Oldest To Newest
@@ -117,6 +118,7 @@ const TimelineClient = () => {
                   <a
                     onClick={() => {
                       setSortingType("Newest To Oldest");
+                      setFilteringType("")
                     }}
                   >
                     Newest To Oldest
