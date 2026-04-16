@@ -1,14 +1,15 @@
+import StatClient from "./StatClient";
+
 export const metadata = {
   title: "KeenKeeper | Stats",
   description: "View friendship metrics and progress on the stats page.",
 };
 
 const page = () => {
+    
     return (
-        <div>
-            hello world form stats            
-        </div>
+        <StatClient></StatClient>
     );
 };
 
-export default page;
+export default page; 

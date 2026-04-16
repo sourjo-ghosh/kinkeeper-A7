@@ -9,6 +9,7 @@ import { IoArchiveOutline } from "react-icons/io5";
 import { MdAddCall } from "react-icons/md";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { Timeline } from "@/app/context/ContextProvider";
+import { toast } from "react-toastify";
 
 const FriendsDetails = () => {
   const { updateActivity } = useContext(Timeline);
@@ -144,7 +145,10 @@ const FriendsDetails = () => {
           </div>
           <div className="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-3">
             <button
-              onClick={() => updateActivity(ExpectedFriend.name, "Call")}
+              onClick={() => {
+                updateActivity(ExpectedFriend.name, "Call");
+                toast.success(`Call with ${ExpectedFriend.name}`);
+              }}
               className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm hover:bg-[#ECFDF5] transition-all duration-200 hover:scale-105 active:scale-95 hover:shadow-lg"
             >
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#DCFCE7] text-[#166534]">
@@ -153,7 +157,10 @@ const FriendsDetails = () => {
               <span className="text-base font-semibold">Call</span>
             </button>
             <button
-              onClick={() => updateActivity(ExpectedFriend.name, "Text")}
+              onClick={() => {
+                updateActivity(ExpectedFriend.name, "Text");
+                toast.success(`Text with ${ExpectedFriend.name}`);
+              }}
               className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition-all duration-200 hover:scale-105 active:scale-95 hover:shadow-lg hover:bg-[#ECFDF5]"
             >
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#DCFCE7] text-[#166534]">
@@ -162,7 +169,10 @@ const FriendsDetails = () => {
               <span className="text-base font-semibold">Text</span>
             </button>
             <button
-              onClick={() => updateActivity(ExpectedFriend.name, "Video")}
+              onClick={() => {
+                updateActivity(ExpectedFriend.name, "Video");
+                toast.success(`Video with ${ExpectedFriend.name}`)
+              }}
               className="cursor-pointer flex flex-col items-center justify-center gap-3 rounded-3xl border border-slate-200 bg-[#F8FAFC] px-5 py-6 text-[#134E32] shadow-sm transition-all duration-200 hover:scale-105 active:scale-95 hover:shadow-lg hover:bg-[#ECFDF5]"
             >
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#DCFCE7] text-[#166534]">
