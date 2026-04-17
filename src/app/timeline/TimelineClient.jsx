@@ -14,7 +14,9 @@ const TimelineClient = () => {
   const handleChange = (e) => {
     setInputValue(e.target.value);
   };
-
+  const HandleOnsubmit = (event) => {
+    event.preventDefault();
+  };
   const FilteredData = useMemo(() => {
     // search by name
     if (inputValue) {
@@ -25,19 +27,15 @@ const TimelineClient = () => {
     // filter
     if (filteringType && filteringType !== "All") {
       return activities.filter((item) => item.action === filteringType);
-    } 
+    }
 
     // sort
     if (sortingType === "Oldest To Newest") {
-      return [...activities].sort(
-        (a, b) => Number(a.time) - Number(b.time)
-      );
+      return [...activities].sort((a, b) => Number(a.time) - Number(b.time));
     }
 
     if (sortingType === "Newest To Oldest") {
-      return [...activities].sort(
-        (a, b) => Number(b.time) - Number(a.time)
-      );
+      return [...activities].sort((a, b) => Number(b.time) - Number(a.time));
     }
 
     return activities;
@@ -108,7 +106,7 @@ const TimelineClient = () => {
                   <a
                     onClick={() => {
                       setSortingType("Oldest To Newest");
-                      setFilteringType("")
+                      setFilteringType("");
                     }}
                   >
                     Oldest To Newest
@@ -118,7 +116,7 @@ const TimelineClient = () => {
                   <a
                     onClick={() => {
                       setSortingType("Newest To Oldest");
-                      setFilteringType("")
+                      setFilteringType("");
                     }}
                   >
                     Newest To Oldest
@@ -126,7 +124,7 @@ const TimelineClient = () => {
                 </li>
               </ul>
             </div>
-            <form>
+            <form onSubmit={HandleOnsubmit}>
               <input
                 value={inputValue}
                 onChange={handleChange}
